@@ -1,16 +1,33 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:ecommerce_app/screens/tabbar_screens/wearable.dart';
+import 'package:ecommerce_app/widgets/products_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PhonesPage extends StatefulWidget {
+import '../../models/product_model.dart';
+import '../../utils/colors.dart';
+import '../../widgets/style_widget.dart';
+
+class PhonesPage extends StatelessWidget {
   const PhonesPage({super.key});
 
   @override
-  State<PhonesPage> createState() => _PhonesPageState();
-}
-
-class _PhonesPageState extends State<PhonesPage> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: AppColors.C_E5E5E5,
+      body: SafeArea(
+        child: SizedBox(
+          height: 370.h,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            itemCount: ProductsModel.phones.length,
+            shrinkWrap: true,
+            itemBuilder: ((context, index) {
+              return ProductsWidget(products: ProductsModel.phones[index]);
+            }),
+          ),
+        ),
+      ),
+    );
   }
 }

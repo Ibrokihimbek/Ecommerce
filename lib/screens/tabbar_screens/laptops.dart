@@ -1,16 +1,32 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LaptopsPage extends StatefulWidget {
+import '../../models/product_model.dart';
+import '../../utils/colors.dart';
+import '../../widgets/products_widget.dart';
+import '../../widgets/style_widget.dart';
+
+class LaptopsPage extends StatelessWidget {
   const LaptopsPage({super.key});
 
   @override
-  State<LaptopsPage> createState() => _LaptopsPageState();
-}
-
-class _LaptopsPageState extends State<LaptopsPage> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: AppColors.C_E5E5E5,
+      body: SafeArea(
+        child: SizedBox(
+          height: 370.h,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            itemCount: ProductsModel.laptops.length,
+            shrinkWrap: true,
+            itemBuilder: ((context, index) {
+              return ProductsWidget(products: ProductsModel.laptops[index]);
+            }),
+          ),
+        ),
+      ),
+    );
   }
 }
