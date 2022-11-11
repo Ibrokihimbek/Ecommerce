@@ -1,7 +1,9 @@
+import 'package:ecommerce_app/screens/search_page.dart';
 import 'package:ecommerce_app/screens/tabbar_screens/drones.dart';
 import 'package:ecommerce_app/screens/tabbar_screens/laptops.dart';
 import 'package:ecommerce_app/screens/tabbar_screens/phones.dart';
 import 'package:ecommerce_app/screens/tabbar_screens/wearable.dart';
+import 'package:ecommerce_app/utils/app_routes.dart';
 import 'package:ecommerce_app/utils/colors.dart';
 import 'package:ecommerce_app/utils/images.dart';
 import 'package:ecommerce_app/widgets/style_widget.dart';
@@ -34,11 +36,31 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     SvgPicture.asset(AppImages.icon_more),
                     SizedBox(width: 36.w),
-                    SizedBox(
-                      width: 265.w,
-                      height: 60.h,
-                      child: TextFieldOfBorder(
-                          hinttext: 'search', iconName: AppImages.icon_search),
+                    InkWell(
+                      borderRadius: BorderRadius.circular(30.r),
+                      onTap: () {
+                        Navigator.pushNamed(context, RoutName.search);
+                      },
+                      child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: AppColors.C_868686),
+                            borderRadius: BorderRadius.circular(30.r),
+                          ),
+                          width: 265.w,
+                          height: 60.h,
+                          child: Row(
+                            children: [
+                              SizedBox(width: 20.w),
+                              SvgPicture.asset(AppImages.icon_search),
+                              SizedBox(width: 15.w),
+                              Text(
+                                'search',
+                                style: fontRalewayW600(
+                                  appcolor: AppColors.C_868686,
+                                ),
+                              ),
+                            ],
+                          )),
                     ),
                   ],
                 ),

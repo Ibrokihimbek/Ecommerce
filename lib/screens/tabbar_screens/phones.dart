@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../models/product_model.dart';
+import '../../utils/app_routes.dart';
 import '../../utils/colors.dart';
 import '../../widgets/style_widget.dart';
 
@@ -23,7 +24,16 @@ class PhonesPage extends StatelessWidget {
             itemCount: ProductsModel.phones.length,
             shrinkWrap: true,
             itemBuilder: ((context, index) {
-              return ProductsWidget(products: ProductsModel.phones[index]);
+              return ProductsWidget(
+                products: ProductsModel.phones[index],
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RoutName.productInfo,
+                    arguments: {'productInfo': ProductsModel.phones[index]},
+                  );
+                },
+              );
             }),
           ),
         ),

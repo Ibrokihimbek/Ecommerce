@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../models/product_model.dart';
+import '../../utils/app_routes.dart';
 import '../../utils/colors.dart';
 import '../../widgets/products_widget.dart';
 import '../../widgets/style_widget.dart';
@@ -22,7 +23,16 @@ class DronesPage extends StatelessWidget {
             itemCount: ProductsModel.drones.length,
             shrinkWrap: true,
             itemBuilder: ((context, index) {
-              return ProductsWidget(products: ProductsModel.drones[index]);
+              return ProductsWidget(
+                products: ProductsModel.drones[index],
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RoutName.productInfo,
+                    arguments: {'productInfo': ProductsModel.drones[index]},
+                  );
+                },
+              );
             }),
           ),
         ),

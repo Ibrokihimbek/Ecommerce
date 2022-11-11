@@ -9,11 +9,15 @@ class AppImages {
   static const icon_more = 'assets/icons/icon_more.svg';
   static const icon_profile = 'assets/icons/icon_profile.svg';
   static const icon_search = 'assets/icons/icon_search.svg';
+  static const icon_arrow = 'assets/icons/icon_arrow.svg';
+  static const icon_back_arrow = 'assets/icons/icon_back_arrow.svg';
 
 // PNG
 
   static const image_splash = 'assets/images/image_splash.png';
   static const image_splash_two = 'assets/images/image_splash_two.png';
+  static const image_search_background = 'assets/images/image_search_background.png';
+
 
 // Watch
   static const image_apple_watch =
@@ -29,7 +33,7 @@ class AppImages {
 
   static const image_acer = 'assets/images/images_laptops/image_acer.webp';
   static const image_asus = 'assets/images/images_laptops/image_asus.png';
-  static const image_macbook = 'assets/images/images_laptops/image_macbook.png'; 
+  static const image_macbook = 'assets/images/images_laptops/image_macbook.png';
   static const image_victus = 'assets/images/images_laptops/images_victus.webp';
 
   // Phones

@@ -155,4 +155,10 @@ class ProductsModel {
       price: '\$ 655',
     ),
   ];
+  static List<List<ProductsModel>> all_product = [
+    ProductsModel.watchs,
+    ProductsModel.drones,
+    ProductsModel.laptops,
+    ProductsModel.phones,
+  ];
 }

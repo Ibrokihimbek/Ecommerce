@@ -21,3 +21,10 @@ TextStyle fontRalewayW600({required Color appcolor}) {
         TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: appcolor),
   );
 }
+
+TextStyle fontRalewayW400({required Color appcolor}) {
+  return GoogleFonts.raleway(
+    textStyle:
+        TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: appcolor),
+  );
+}

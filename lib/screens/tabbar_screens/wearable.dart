@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/models/product_model.dart';
+import 'package:ecommerce_app/utils/app_routes.dart';
 import 'package:ecommerce_app/utils/colors.dart';
 import 'package:ecommerce_app/widgets/style_widget.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,16 @@ class WearablePage extends StatelessWidget {
             itemCount: ProductsModel.watchs.length,
             shrinkWrap: true,
             itemBuilder: ((context, index) {
-              return ProductsWidget(products: ProductsModel.watchs[index]);
+              return ProductsWidget(
+                products: ProductsModel.watchs[index],
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RoutName.productInfo,
+                    arguments: {'productInfo': ProductsModel.watchs[index]},
+                  );
+                },
+              );
             }),
           ),
         ),

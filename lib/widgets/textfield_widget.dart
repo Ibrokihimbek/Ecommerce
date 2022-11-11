@@ -44,8 +44,13 @@ Widget textFieldPassword({
   );
 }
 
-Widget TextFieldOfBorder({required String hinttext, required String iconName}) {
-  return TextField(
+Widget TextFieldOfBorder({
+  required String hinttext,
+  required String iconName,
+  ValueChanged<String>? onchanged,
+}) {
+  return TextFormField(
+    onChanged: onchanged,
     textInputAction: TextInputAction.next,
     keyboardType: TextInputType.text,
     decoration: InputDecoration(
