@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/models/product_model.dart';
+import 'package:ecommerce_app/screens/basket_page.dart';
 import 'package:ecommerce_app/utils/colors.dart';
 import 'package:ecommerce_app/utils/images.dart';
 import 'package:ecommerce_app/widgets/post_indicator_widget.dart';
@@ -166,6 +167,7 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                             if (addBasket.contains(widget.productInfo) ==
                                 false) {
                               addBasket.add(widget.productInfo);
+                              sum += widget.productInfo.price;
                             }
                           },
                           buttonName: 'Add to basket',

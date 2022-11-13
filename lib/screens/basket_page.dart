@@ -1,7 +1,9 @@
 import 'package:ecommerce_app/models/product_model.dart';
 import 'package:ecommerce_app/screens/product_info_page.dart';
+import 'package:ecommerce_app/utils/app_routes.dart';
 import 'package:ecommerce_app/utils/colors.dart';
 import 'package:ecommerce_app/utils/images.dart';
+import 'package:ecommerce_app/widgets/button_widget.dart';
 import 'package:ecommerce_app/widgets/style_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -102,21 +104,15 @@ class _BasketPageState extends State<BasketPage> {
             SizedBox(height: 30.h),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Container(
-                width: double.infinity,
-                height: 70.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.r),
-                  color: AppColors.C_5956E9,
-                ),
-                child: Center(
-                  child: Text(
-                    'Checkout',
-                    style: fontRalewayW700(appcolor: AppColors.C_FFFFFF)
-                        .copyWith(fontSize: 20.sp),
-                  ),
-                ),
-              ),
+              child: buttonLarge(
+                  onTap: () {
+                    if (sum != 0) {
+                      Navigator.pushNamed(context, RoutName.checkout);
+                    }
+                  },
+                  buttonName: 'Checkout',
+                  buttonColor: AppColors.C_5956E9,
+                  buttonNameColor: AppColors.C_FFFFFF),
             ),
           ],
         ),
@@ -167,7 +163,16 @@ class _BasketPageState extends State<BasketPage> {
                       ),
                       SizedBox(width: 12.w),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          setState(
+                            () {
+                              if (addBasket.count != 0) {
+                                addBasket.count -= 1;
+                                sum -= addBasket.price;
+                              }
+                            },
+                          );
+                        },
                         child: Container(
                           width: 30.w,
                           height: 30.h,

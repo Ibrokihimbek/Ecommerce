@@ -25,7 +25,7 @@ class ProductsModel {
       productName: 'Apple Watch',
       productModel: 'Series 6 . Red',
       price: 359,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -34,7 +34,7 @@ class ProductsModel {
       productName: 'SAMSUNG\nGalaxy Watch',
       productModel: 'Active. Green',
       price: 159,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -43,7 +43,7 @@ class ProductsModel {
       productName: 'Redmi Smart\nBand',
       productModel: 'Series 4. Black',
       price: 125,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -52,7 +52,7 @@ class ProductsModel {
       productName: 'Sport Watch',
       productModel: 'Active. black',
       price: 200,
-      count: 0,
+      count: 1,
     ),
   ];
 
@@ -64,7 +64,7 @@ class ProductsModel {
       productName: 'Acer Laptop',
       productModel: 'Nitro Gaming',
       price: 800,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -73,7 +73,7 @@ class ProductsModel {
       productName: 'Asus Laptop',
       productModel: 'TUF Gaming',
       price: 120,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -82,7 +82,7 @@ class ProductsModel {
       productName: 'MacBook Air',
       productModel: 'M2 chip model',
       price: 195,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -91,7 +91,7 @@ class ProductsModel {
       productName: 'HP Laptop',
       productModel: 'Victus Gamin',
       price: 950,
-      count: 0,
+      count: 1,
     ),
   ];
 
@@ -103,7 +103,7 @@ class ProductsModel {
       productName: 'SAMSUNG\nGalaxy Phone',
       productModel: 'S22 +',
       price: 1200,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -112,7 +112,7 @@ class ProductsModel {
       productName: 'xiaomi Phone',
       productModel: 'Note 12 Discovery',
       price: 700,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -121,7 +121,7 @@ class ProductsModel {
       productName: 'iPhone Phone',
       productModel: '14 pro max',
       price: 1800,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -130,7 +130,7 @@ class ProductsModel {
       productName: 'Huawei Phone',
       productModel: 'Mate 50 Pro',
       price: 850,
-      count: 0,
+      count: 1,
     ),
   ];
 
@@ -142,7 +142,7 @@ class ProductsModel {
       productName: 'Aeromotus',
       productModel: 'V56 model',
       price: 1250,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -151,7 +151,7 @@ class ProductsModel {
       productName: 'JOUAV',
       productModel: 'H1365 model',
       price: 800,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -160,7 +160,7 @@ class ProductsModel {
       productName: 'Parrot',
       productModel: 'Toy model',
       price: 200,
-      count: 0,
+      count: 1,
     ),
     ProductsModel(
       description:
@@ -169,7 +169,7 @@ class ProductsModel {
       productName: 'UVify',
       productModel: 'S784 model',
       price: 655,
-      count: 0,
+      count: 1,
     ),
   ];
   static List<List<ProductsModel>> all_product = [

@@ -4,7 +4,13 @@ class AppImages {
   static const icon_buy = 'assets/icons/icon_buy.svg';
   static const icon_email = 'assets/icons/icon_email.svg';
   static const icon_heart = 'assets/icons/icon_heart.svg';
+  static const icon_heart_colored = 'assets/icons/icon_health_colored.svg';
+  static const icon_profile_colored = 'assets/icons/icon_profile_colored.svg';
+  static const icon_buy_colored = 'assets/icons/icon_buy_colored.svg';
+
+
   static const icon_home = 'assets/icons/icon_home.svg';
+  static const icon_home_white = 'assets/icons/icon_home_white.svg';
   static const icon_lock = 'assets/icons/icon_lock.svg';
   static const icon_more = 'assets/icons/icon_more.svg';
   static const icon_profile = 'assets/icons/icon_profile.svg';
@@ -13,9 +19,13 @@ class AppImages {
   static const icon_back_arrow = 'assets/icons/icon_back_arrow.svg';
   static const icon_delete = 'assets/icons/icon_delete.svg';
   static const icon_notification = 'assets/icons/icon_notification.svg';
+  static const icon_location = 'assets/icons/icon_location.svg';
+  static const icon_call = 'assets/icons/icon_call.svg';
+  static const icoc_chevron_left = 'assets/icons/icon_chevron_left.svg';
 
 // PNG
 
+  static const image_profile = 'assets/images/image_profile.png';
   static const image_splash = 'assets/images/image_splash.png';
   static const image_splash_two = 'assets/images/image_splash_two.png';
   static const image_search_background =
@@ -56,4 +66,15 @@ class AppImages {
 // JPG
 
   static const image_login_page = 'assets/images/image_login.jpg';
+
+// CARDS
+
+  static const image_card_visa = 'assets/images/cards/image_card_visa.png';
+  static const image_card_mastercard =
+      'assets/images/cards/image_card_mastercard.png';
+  static const image_card_bank = 'assets/images/cards/image_card_bank.png';
+
+// GIFS
+
+  static const gif_payment_success = 'assets/gifs/payment_success.gif';
 }

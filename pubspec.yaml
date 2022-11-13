@@ -72,6 +72,8 @@ flutter:
     - assets/images/images_phones/
     - assets/images/images_laptops/
     - assets/images/images_drones/
+    - assets/images/cards/
+    - assets/gifs/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

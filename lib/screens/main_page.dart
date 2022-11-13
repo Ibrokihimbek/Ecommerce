@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screens/basket_page.dart';
+import 'package:ecommerce_app/screens/profile_page.dart';
 import 'package:ecommerce_app/utils/colors.dart';
 import 'package:ecommerce_app/utils/images.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +21,8 @@ class _MainPageState extends State<MainPage> {
   List<Widget> _pages = [
     HomePage(),
     Container(),
-    Container(),
+    ProfilePage(),
     BasketPage(),
-    
   ];
 
   int currentPageIndex = 0;
@@ -51,28 +51,36 @@ class _MainPageState extends State<MainPage> {
               icon: SizedBox(
                 width: 21.w,
                 height: 21.h,
-                child: SvgPicture.asset(AppImages.icon_home),
+                child: currentPageIndex == 0
+                    ? SvgPicture.asset(AppImages.icon_home)
+                    : SvgPicture.asset(AppImages.icon_home_white),
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: SizedBox(
                 width: 21.w,
                 height: 21.h,
-                child: SvgPicture.asset(AppImages.icon_heart),
+                child: currentPageIndex == 1
+                    ? SvgPicture.asset(AppImages.icon_heart_colored)
+                    : SvgPicture.asset(AppImages.icon_heart),
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: SizedBox(
                 width: 21.w,
                 height: 21.h,
-                child: SvgPicture.asset(AppImages.icon_profile),
+                child: currentPageIndex == 2
+                    ? SvgPicture.asset(AppImages.icon_profile_colored)
+                    : SvgPicture.asset(AppImages.icon_profile),
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: SizedBox(
                 width: 21.w,
                 height: 21.h,
-                child: SvgPicture.asset(AppImages.icon_buy),
+                child: currentPageIndex == 3
+                    ? SvgPicture.asset(AppImages.icon_buy_colored)
+                    : SvgPicture.asset(AppImages.icon_buy),
               ),
               label: ''),
         ],
