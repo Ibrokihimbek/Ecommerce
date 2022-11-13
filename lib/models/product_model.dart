@@ -6,15 +6,16 @@ class ProductsModel {
   String productName;
   String productModel;
   String description;
-  String price;
+  int price;
+  int count;
 
-  ProductsModel({
-    required this.description,
-    required this.imageName,
-    required this.productName,
-    required this.productModel,
-    required this.price,
-  });
+  ProductsModel(
+      {required this.description,
+      required this.imageName,
+      required this.productName,
+      required this.productModel,
+      required this.price,
+      required this.count});
 
   static List<ProductsModel> watchs = [
     ProductsModel(
@@ -23,7 +24,8 @@ class ProductsModel {
       imageName: AppImages.image_apple_watch,
       productName: 'Apple Watch',
       productModel: 'Series 6 . Red',
-      price: '\$ 359',
+      price: 359,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -31,7 +33,8 @@ class ProductsModel {
       imageName: AppImages.image_samsung_watch,
       productName: 'SAMSUNG\nGalaxy Watch',
       productModel: 'Active. Green',
-      price: '\$ 159',
+      price: 159,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -39,7 +42,8 @@ class ProductsModel {
       imageName: AppImages.image_redmi_watch,
       productName: 'Redmi Smart\nBand',
       productModel: 'Series 4. Black',
-      price: '\$ 125',
+      price: 125,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -47,7 +51,8 @@ class ProductsModel {
       imageName: AppImages.image_sport_watch,
       productName: 'Sport Watch',
       productModel: 'Active. black',
-      price: '\$ 200',
+      price: 200,
+      count: 0,
     ),
   ];
 
@@ -58,7 +63,8 @@ class ProductsModel {
       imageName: AppImages.image_acer,
       productName: 'Acer Laptop',
       productModel: 'Nitro Gaming',
-      price: '\$ 800',
+      price: 800,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -66,7 +72,8 @@ class ProductsModel {
       imageName: AppImages.image_asus,
       productName: 'Asus Laptop',
       productModel: 'TUF Gaming',
-      price: '\$ 1200',
+      price: 120,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -74,7 +81,8 @@ class ProductsModel {
       imageName: AppImages.image_macbook,
       productName: 'MacBook Air',
       productModel: 'M2 chip model',
-      price: '\$ 1950',
+      price: 195,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -82,7 +90,8 @@ class ProductsModel {
       imageName: AppImages.image_victus,
       productName: 'HP Laptop',
       productModel: 'Victus Gamin',
-      price: '\$ 950',
+      price: 950,
+      count: 0,
     ),
   ];
 
@@ -93,7 +102,8 @@ class ProductsModel {
       imageName: AppImages.image_samsung,
       productName: 'SAMSUNG\nGalaxy Phone',
       productModel: 'S22 +',
-      price: '\$ 1200',
+      price: 1200,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -101,7 +111,8 @@ class ProductsModel {
       imageName: AppImages.image_xiaomi,
       productName: 'xiaomi Phone',
       productModel: 'Note 12 Discovery',
-      price: '\$ 700',
+      price: 700,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -109,7 +120,8 @@ class ProductsModel {
       imageName: AppImages.image_iphone,
       productName: 'iPhone Phone',
       productModel: '14 pro max',
-      price: '\$ 1800',
+      price: 1800,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -117,7 +129,8 @@ class ProductsModel {
       imageName: AppImages.image_huawei,
       productName: 'Huawei Phone',
       productModel: 'Mate 50 Pro',
-      price: '\$ 850',
+      price: 850,
+      count: 0,
     ),
   ];
 
@@ -128,7 +141,8 @@ class ProductsModel {
       imageName: AppImages.image_aremotus,
       productName: 'Aeromotus',
       productModel: 'V56 model',
-      price: '\$ 1250',
+      price: 1250,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -136,7 +150,8 @@ class ProductsModel {
       imageName: AppImages.image_jouav,
       productName: 'JOUAV',
       productModel: 'H1365 model',
-      price: '\$ 800',
+      price: 800,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -144,7 +159,8 @@ class ProductsModel {
       imageName: AppImages.image_parrot,
       productName: 'Parrot',
       productModel: 'Toy model',
-      price: '\$ 200',
+      price: 200,
+      count: 0,
     ),
     ProductsModel(
       description:
@@ -152,7 +168,8 @@ class ProductsModel {
       imageName: AppImages.image_uvify,
       productName: 'UVify',
       productModel: 'S784 model',
-      price: '\$ 655',
+      price: 655,
+      count: 0,
     ),
   ];
   static List<List<ProductsModel>> all_product = [

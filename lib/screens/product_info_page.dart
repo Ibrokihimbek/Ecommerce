@@ -17,6 +17,8 @@ class ProductInfoPage extends StatefulWidget {
   State<ProductInfoPage> createState() => _ProductInfoPageState();
 }
 
+List<ProductsModel> addBasket = [];
+
 class _ProductInfoPageState extends State<ProductInfoPage> {
   int currentIndex = 0;
   PageController pageController = PageController();
@@ -134,7 +136,8 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                         children: [
                           Text(
                             'Full description',
-                            style: fontRalewayW700(appcolor: AppColors.C_5956E9),
+                            style:
+                                fontRalewayW700(appcolor: AppColors.C_5956E9),
                           ),
                           SizedBox(width: 7.w),
                           SvgPicture.asset(AppImages.icon_arrow),
@@ -150,7 +153,7 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                                 .copyWith(fontSize: 17.sp),
                           ),
                           Text(
-                            widget.productInfo.price,
+                            '\$ ${widget.productInfo.price}',
                             style: fontRalewayW700(appcolor: AppColors.C_5956E9)
                                 .copyWith(fontSize: 18.sp),
                           ),
@@ -159,7 +162,12 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
                       SizedBox(height: 32.h),
                       Center(
                         child: buttonLarge(
-                          onTap: () {},
+                          onTap: () {
+                            if (addBasket.contains(widget.productInfo) ==
+                                false) {
+                              addBasket.add(widget.productInfo);
+                            }
+                          },
                           buttonName: 'Add to basket',
                           buttonColor: AppColors.C_5956E9,
                           buttonNameColor: AppColors.C_FFFFFF,

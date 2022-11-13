@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screens/basket_page.dart';
 import 'package:ecommerce_app/utils/colors.dart';
 import 'package:ecommerce_app/utils/images.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class _MainPageState extends State<MainPage> {
     HomePage(),
     Container(),
     Container(),
-    Container(),
+    BasketPage(),
+    
   ];
 
   int currentPageIndex = 0;

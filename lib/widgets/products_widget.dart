@@ -63,7 +63,7 @@ class _ProductsWidgetState extends State<ProductsWidget> {
                     ),
                     SizedBox(height: 15.h),
                     Text(
-                      widget.products.price,
+                      '\$ ${widget.products.price}',
                       textAlign: TextAlign.center,
                       style: fontRalewayW700(appcolor: AppColors.C_5956E9)
                           .copyWith(fontSize: 17.sp),

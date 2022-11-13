@@ -11,13 +11,15 @@ class AppImages {
   static const icon_search = 'assets/icons/icon_search.svg';
   static const icon_arrow = 'assets/icons/icon_arrow.svg';
   static const icon_back_arrow = 'assets/icons/icon_back_arrow.svg';
+  static const icon_delete = 'assets/icons/icon_delete.svg';
+  static const icon_notification = 'assets/icons/icon_notification.svg';
 
 // PNG
 
   static const image_splash = 'assets/images/image_splash.png';
   static const image_splash_two = 'assets/images/image_splash_two.png';
-  static const image_search_background = 'assets/images/image_search_background.png';
-
+  static const image_search_background =
+      'assets/images/image_search_background.png';
 
 // Watch
   static const image_apple_watch =

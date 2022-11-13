@@ -36,7 +36,11 @@ class _SearchPageState extends State<SearchPage> {
                 padding: const EdgeInsets.only(left: 30, top: 47).r,
                 child: Row(
                   children: [
-                    SvgPicture.asset(AppImages.icon_back_arrow),
+                    InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: SvgPicture.asset(AppImages.icon_back_arrow)),
                     SizedBox(width: 36.w),
                     SizedBox(
                       width: 265.w,
@@ -174,7 +178,7 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                     SizedBox(height: 15.h),
                     Text(
-                      products.price,
+                      '\$ ${products.price}',
                       textAlign: TextAlign.center,
                       style: fontRalewayW700(appcolor: AppColors.C_5956E9)
                           .copyWith(fontSize: 15.sp),
