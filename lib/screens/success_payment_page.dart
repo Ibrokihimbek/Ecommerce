@@ -1,4 +1,3 @@
-import 'package:ecommerce_app/screens/product_info_page.dart';
 import 'package:ecommerce_app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
